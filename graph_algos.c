@@ -12,10 +12,10 @@
 /* A RETIRER POUR LE TP 1 */
 /* ====================================================================== */
 /*! \fn graphe * Symetrique(graphe * g)
-    \param g (entrée) : un graphe.
+    \param g (entrï¿½e) : un graphe.
     \return un graphe.
-    \brief construit et retourne le graphe g_1 symétrique du graphe g (algorithme linéaire)
-    \warning seule la représentation 'gamma' est utilisée. 
+    \brief construit et retourne le graphe g_1 symï¿½trique du graphe g (algorithme linï¿½aire)
+    \warning seule la reprï¿½sentation 'gamma' est utilisï¿½e. 
 */
 graphe * Symetrique(graphe * g)
 /* ====================================================================== */
@@ -43,10 +43,10 @@ graphe * Symetrique(graphe * g)
 /* A RETIRER POUR LE TP 1 */
 /* ====================================================================== */
 /*! \fn graphe * FermetureSymetrique(graphe * g)
-    \param g (entrée) : un graphe.
+    \param g (entrï¿½e) : un graphe.
     \return un graphe.
-    \brief construit et retourne la fermeture symétrique du graphe g (algorithme linéaire)
-    \warning seule la représentation 'gamma' est utilisée. 
+    \brief construit et retourne la fermeture symï¿½trique du graphe g (algorithme linï¿½aire)
+    \warning seule la reprï¿½sentation 'gamma' est utilisï¿½e. 
 */
 graphe * FermetureSymetrique(graphe * g)
 /* ====================================================================== */
@@ -73,13 +73,13 @@ graphe * FermetureSymetrique(graphe * g)
 
 /* ====================================================================== */
 /*! \fn void CompFortConnexe(graphe * g, graphe *g_1, int a, boolean * Ca)
-    \param g (entrée) : un graphe.
-    \param g_1 (entrée) : le graphe symétrique de g.
-    \param a (entrée) : un sommet du graphe g.
-    \param Ca (sortie) : un sous-ensemble des sommets de g (tableau de booléens).
+    \param g (entrï¿½e) : un graphe.
+    \param g_1 (entrï¿½e) : le graphe symï¿½trique de g.
+    \param a (entrï¿½e) : un sommet du graphe g.
+    \param Ca (sortie) : un sous-ensemble des sommets de g (tableau de boolï¿½ens).
     \brief retourne dans Ca la composante fortement connexe de g contenant a 
-          (sous la forme d'un tableau de booléens). 
-    \warning Ca doit avoir été alloué correctement (pas de vérification)
+          (sous la forme d'un tableau de boolï¿½ens). 
+    \warning Ca doit avoir ï¿½tï¿½ allouï¿½ correctement (pas de vï¿½rification)
 */
 void CompFortConnexe(graphe * g, graphe *g_1, int a, boolean * Ca)
 /* ====================================================================== */
@@ -139,9 +139,9 @@ void CompFortConnexe(graphe * g, graphe *g_1, int a, boolean * Ca)
 
 /* ====================================================================== */
 /*! \fn boolean ExisteCircuit(graphe * g, int a)
-    \param g (entrée) : un graphe.
-    \param a (entrée) : un sommet du graphe g.
-    \return booléen
+    \param g (entrï¿½e) : un graphe.
+    \param a (entrï¿½e) : un sommet du graphe g.
+    \return boolï¿½en
     \brief teste l'existence d'un circuit dans g contenant a 
 */
 boolean ExisteCircuit(graphe * g, int a)
@@ -180,12 +180,12 @@ boolean ExisteCircuit(graphe * g, int a)
 
 /* ====================================================================== */
 /*! \fn void CompConnexe(graphe * g, graphe *g_1, int a, boolean * Ca)
-    \param   g (entrée) : un graphe.
-    \param g_1 (entrée) : le graphe symétrique de g.
-    \param a (entrée) : un sommet du graphe g.
-    \return un sous-ensemble de sommets de g (tableau de booléens).
+    \param   g (entrï¿½e) : un graphe.
+    \param g_1 (entrï¿½e) : le graphe symï¿½trique de g.
+    \param a (entrï¿½e) : un sommet du graphe g.
+    \return un sous-ensemble de sommets de g (tableau de boolï¿½ens).
     \brief retourne la composante connexe de g contenant a
-          (sous la forme d'un tableau de booléens). 
+          (sous la forme d'un tableau de boolï¿½ens). 
 */
 void CompConnexe(graphe * g, graphe *g_1, int a, boolean * Ca)
 /* ====================================================================== */
@@ -228,9 +228,9 @@ void CompConnexe(graphe * g, graphe *g_1, int a, boolean * Ca)
 
 /* ====================================================================== */
 /*! \fn int Connexe(graphe * g, graphe *g_1)
-    \param g (entrée) : un graphe.
-    \param g_1 (entrée) : le graphe symétrique de g.
-    \return booléen.
+    \param g (entrï¿½e) : un graphe.
+    \param g_1 (entrï¿½e) : le graphe symï¿½trique de g.
+    \return boolï¿½en.
     \brief retourne 1 si le graphe est connexe, 0 sinon. 
 */
 boolean Connexe(graphe * g, graphe *g_1)
@@ -256,8 +256,8 @@ boolean Connexe(graphe * g, graphe *g_1)
 /* A RETIRER POUR LES TP 1, 2 */
 /* ====================================================================== */
 /*! \fn graphe * Kruskal1(graphe * g, graphe *g_1)
-    \param g (entrée) : un graphe pondéré connexe sans boucle.
-    \param g_1 (entrée) : le graphe symétrique de g.
+    \param g (entrï¿½e) : un graphe pondï¿½rï¿½ connexe sans boucle.
+    \param g_1 (entrï¿½e) : le graphe symï¿½trique de g.
     \return un arbre. 
     \brief retourne un arbre de poids maximal pour g.
 */
@@ -321,11 +321,11 @@ graphe * Kruskal1(graphe * g, graphe *g_1)
 /* A RETIRER POUR LES TP 1, 2 */
 /* ====================================================================== */
 /*! \fn graphe * Kruskal2(graphe * g, graphe *g_1)
-    \param g (entrée) : un graphe pondéré connexe sans boucle.
-    \param g_1 (entrée) : le graphe symétrique de g.
+    \param g (entrï¿½e) : un graphe pondï¿½rï¿½ connexe sans boucle.
+    \param g_1 (entrï¿½e) : le graphe symï¿½trique de g.
     \return un arbre. 
     \brief retourne un arbre de poids maximal pour g.
-    \warning les données du graphe d'origine seront détruites. 
+    \warning les donnï¿½es du graphe d'origine seront dï¿½truites. 
 */
 graphe * Kruskal2(graphe * g, graphe *g_1)
 /* ====================================================================== */
