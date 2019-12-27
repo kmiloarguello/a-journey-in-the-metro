@@ -8,7 +8,6 @@
 #define USAGE "lit un graphe dans le fichier <filename> et genere une figure en PostScript dans <filename>.eps"
 
 void dijkstra(graphe *g, int n, int r);
-int ca_min(int a, int b);
 
 int main(int argc, char **argv)
 {
@@ -64,22 +63,24 @@ void dijkstra(graphe *g, int n, int r)
 
   int L[n];
 
+  // Initialize the L array with infinite values
+  // The idea is to start switching each value by the successors
   for (i = 0; i < n; i++)
   {
     L[i] = infinite;
-    //S[i] = TRUE;
+    
+    // We want to assure that only takes sucessors and not visited
     g->v_sommets[i] = -1;
   }
 
-  LifoPush(T, r);
+  // Initializing values
+  LifoPush(T, r); // Putting the initial vertex r into the stack
+  L[r] = initvalue; // Add the value 0 to the initial vertex
+  k = initvalue; // Initiating counter
+  g->v_sommets[r] = 0; // Putting the value 0 to the vertex
+  int mm = initvalue; // MU Initiating weight (sum of the shortest path)
 
-  L[r] = initvalue;
-  k = initvalue;
-  mu = initvalue;
-  g->v_sommets[r] = 0;
-  int mm = 0;
-
-  while (k < n && mu != infinite)
+  while (k < n && mm != infinite)
   {
     printf("\n\n------------------------ Iteration %d \n", k);
 
@@ -89,38 +90,44 @@ void dijkstra(graphe *g, int n, int r)
     printf("\n\nN: %s", g->nomsommet[y]);
 
     printf("L[y]=%d and len=%d \n", L[y], len);
-    mm = min(L[y], len);
+    mm = min(L[y], len); // Compare the length of the previous sucessors and the current stack value 
+                         //to determine the next vertex to follow the sortest path
 
+    // This Su[n] is used for count the minimun of sucessors for each iteration. 
+    // The idea is that each iteration contains an array of zeros Su=[0,0,0,0,0,0]
+    // And switching only the current sucessors to determine the minimum value
+    // Here, the initialization
     int Su[n];
     for (i = 0; i < n; i++)
       {
         Su[i] = 0;
       }
 
+    // For all the successors
     for (p = g->gamma[y]; p != NULL; p = p->next)
     {
 
-      s = p->som;
-      len = p->v_arc;
+      s = p->som; // s is the index of vertex
+      len = p->v_arc; // len is the value of arc
       printf("\n\nVertex: %s", g->nomsommet[s]);
 
       printf("s %d ", s);
       printf("len %d \n", len);
 
+      // Only checks non visited vertices
       if (g->v_sommets[s] == -1)
       {
 
         printf("mu=%d\n", mm);
         printf("SUMA=%d\n", mm + len);
 
-        L[s] = mm + len;
-
-        Su[s] = L[s];
+        L[s] = mm + len; // Put into the main L array the values of the lengths
+        Su[s] = L[s]; // Put into the temporal array Su to calculate the min between successors
 
         for (i = 0; i < n; i++){
-          if(Su[i] != 0){
+          if(Su[i] != 0){ // Only take in account the existing values i.e different than 0
             printf("MIN %d , %d =  %d \n",Su[i],Su[s],min(Su[i], Su[s]));
-            len = min(Su[i], Su[s] + mm);
+            len = min(Su[i], Su[s] + mm); // Find the minimum between the weights until this vertex (Su[s] + mm) and the current sucessors
           }
           
         }
@@ -129,7 +136,7 @@ void dijkstra(graphe *g, int n, int r)
 
       printf("Su = [%d %d %d %d %d %d] \n", Su[0], Su[1], Su[2], Su[3], Su[4], Su[5]);
       printf("L = [%d %d %d %d %d %d] \n", L[0], L[1], L[2], L[3], L[4], L[5]);
-      LifoPush(T, s);
+      LifoPush(T, s); // Push into the stack to update 
     }
 
     k++;
@@ -145,17 +152,6 @@ void dijkstra(graphe *g, int n, int r)
   //   printf("L[%d] = %d \n", rr, L[rr]);
   // }
 
-  LifoTermine(T);
+  LifoTermine(T);// Finish the stack
 }
 
-int ca_min(int a, int b)
-{
-  if (a <= b)
-  {
-    return a;
-  }
-  else
-  {
-    return b;
-  }
-}
