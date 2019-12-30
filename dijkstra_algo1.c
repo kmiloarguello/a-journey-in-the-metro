@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
   g = ReadGraphe(argv[1]); /* lit le graphe a partir du fichier */
 
-  SP(g,19,203);
+  SP(g,0,203);
 
   PlongementCirculaire(g, 300);    /* plonge le graphe dans le plan */
   sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
@@ -92,7 +92,14 @@ void dijkstra(graphe *g, int r, int t)
 
     y = LifoPop(T);
 
-    
+    if(t == L[y]){
+      printf("\n\nYou arrived: %s", g->nomsommet[y]);
+      break;
+    }
+
+    // We need to assure than there is not previous values equals 
+    // That's mean no vertices with the same value than other
+    // This checks runs in O(n^2)
     for (a = 0; a < n; a++)
     {
       for (b= a + 1; b <n; b++){
@@ -105,20 +112,15 @@ void dijkstra(graphe *g, int r, int t)
     }
     if(duplicated) break;
 
-    /*
-    printf("t=%d\n", t);
-    if(t == L[y]){
-      printf("\n\nYou arrived: %s", g->nomsommet[y]);
-      break;
-    }
-*/
-    g->v_sommets[y] = 0;
-
-    mm = min(L[y], len); // Compare the length of the previous sucessors and the current stack value 
-                         //to determine the next vertex to follow the sortest path
+    
 
     printf("\n\nORIGIN: %s", g->nomsommet[y]);
     printf("L[y]=%d and len=%d \n", L[y], len);
+
+    g->v_sommets[y] = 0;
+    mm = min(L[y], len); // Compare the length of the previous sucessors and the current stack value 
+                         //to determine the next vertex to follow the sortest path
+
 
     // This Su[n] is used for count the minimun of sucessors for each iteration. 
     // The idea is that each iteration contains an array of zeros Su=[0,0,0,0,0,0]
@@ -137,14 +139,10 @@ void dijkstra(graphe *g, int r, int t)
       s = p->som; // s is the index of vertex
       len = p->v_arc; // len is the value of arc
 
-
-
       printf("\n\nNEXT: %s", g->nomsommet[s]);
-
       printf("s %d ", s);
       printf("len %d \n", len);
       
-
       // Only checks non visited vertices
       if (g->v_sommets[s] == -1)
       {
@@ -157,7 +155,6 @@ void dijkstra(graphe *g, int r, int t)
 
         for (i = 0; i < n; i++){
           if(Su[i] != 0){ // Only take in account the existing values i.e different than 0
-            // printf("MIN %d , %d =  %d \n",Su[i],Su[s],min(Su[i], Su[s]));
             len = min(Su[i], Su[s] + mm); // Find the minimum between the weights until this vertex (Su[s] + mu) and the current sucessors
           }
           
@@ -165,21 +162,16 @@ void dijkstra(graphe *g, int r, int t)
                   
       }
 
-      // printf("Su = [%d %d %d %d %d %d] \n", Su[0], Su[1], Su[2], Su[3], Su[4], Su[5]);
-      //printf("L = [%d %d %d %d %d %d] \n", L[0], L[1], L[2], L[3], L[4], L[5]);
-
       LifoPush(T, s); // Push into the stack to update 
     }
 
     k++;
-
-    //printf("S=[%d %d %d %d %d %d] \n ", S[0], S[1], S[2], S[3], S[4], S[5]);
   }
-/*
+
   printf("\n\n --------- END ------------------- \n");
   int rr;
 
-  for (rr = 0; rr < n; rr++)
+  for (rr = 0; rr < ; rr++)
   {
     if(L[rr] != infinite){
       printf("Station: %s - L[%d] = %d\n", g->nomsommet[rr], rr, L[rr]);
@@ -188,7 +180,7 @@ void dijkstra(graphe *g, int r, int t)
   }
 
   printf("\n");
-*/
+
   LifoTermine(T);// Finish the stack
 }
 
