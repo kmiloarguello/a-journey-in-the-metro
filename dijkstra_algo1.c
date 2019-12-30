@@ -7,7 +7,8 @@
 #define initvalue 0
 #define USAGE "lit un graphe dans le fichier <filename> et genere une figure en PostScript dans <filename>.eps"
 
-void dijkstra(graphe *g, int n, int r);
+void dijkstra(graphe *g, int n, int r, int t);
+graphe * SP(graphe *g, int x, int y);
 
 int main(int argc, char **argv)
 {
@@ -22,7 +23,7 @@ int main(int argc, char **argv)
 
   g = ReadGraphe(argv[1]); /* lit le graphe a partir du fichier */
 
-  dijkstra(g, g->nsom, 0);
+  SP(g,19,203);
 
   PlongementCirculaire(g, 300);    /* plonge le graphe dans le plan */
   sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
@@ -44,22 +45,27 @@ int main(int argc, char **argv)
 
 /**
  * Find all the possible routes from a starting point using Dijkstra algorithm
- * @param{graphe} *g Graph (Pointer)
- * @param{int} n Length of Graph
- * @param{int} r Initial vertex
+ * \fn void Dijkstra(graphe * g, int x)
+ * @param{graphe} *g a network. The length of each arc must be stored in 
+ *                    the field v_arc of the structure cell.
+ * @param{int} r a vertex of g.
+ * @brief compute, for each vertex y of g, the length Dx(y)of a shortest path
+ *        from x to y. This length is stored in the field 
+ *        v_sommets of the structure g.
  * 
- * */
-void dijkstra(graphe *g, int n, int r)
+ **/
+void dijkstra(graphe *g, int r, int t)
 {
-
   Lifo *T;
-  int i, s, k, mu, y, y_p, len, mini = 0;
+  int i, s, k, y, y_p, len, mini = 0;
+  int min = 0;
+  int n = g->nsom;
+  int a,b;
   pcell p;
   boolean *S;
-  int min = 0;
+  boolean duplicated = FALSE; // Helps to prevents previous vertices
 
   T = CreeLifoVide(n);
-  //S = EnsembleVide(n);
 
   int L[n];
 
@@ -86,12 +92,33 @@ void dijkstra(graphe *g, int n, int r)
 
     y = LifoPop(T);
 
-    g->v_sommets[y] = 0;
-    printf("\n\nORIGIN: %s", g->nomsommet[y]);
+    
+    for (a = 0; a < n; a++)
+    {
+      for (b= a + 1; b <n; b++){
+        if(L[a] == L[b] && L[a] != infinite){
+          printf("It's impossible find the destination.\n");
+          duplicated = TRUE;
+          break;
+        }
+      }     
+    }
+    if(duplicated) break;
 
-    printf("L[y]=%d and len=%d \n", L[y], len);
+    /*
+    printf("t=%d\n", t);
+    if(t == L[y]){
+      printf("\n\nYou arrived: %s", g->nomsommet[y]);
+      break;
+    }
+*/
+    g->v_sommets[y] = 0;
+
     mm = min(L[y], len); // Compare the length of the previous sucessors and the current stack value 
                          //to determine the next vertex to follow the sortest path
+
+    printf("\n\nORIGIN: %s", g->nomsommet[y]);
+    printf("L[y]=%d and len=%d \n", L[y], len);
 
     // This Su[n] is used for count the minimun of sucessors for each iteration. 
     // The idea is that each iteration contains an array of zeros Su=[0,0,0,0,0,0]
@@ -109,10 +136,14 @@ void dijkstra(graphe *g, int n, int r)
 
       s = p->som; // s is the index of vertex
       len = p->v_arc; // len is the value of arc
-      printf("\n\nDEST: %s", g->nomsommet[s]);
+
+
+
+      printf("\n\nNEXT: %s", g->nomsommet[s]);
 
       printf("s %d ", s);
       printf("len %d \n", len);
+      
 
       // Only checks non visited vertices
       if (g->v_sommets[s] == -1)
@@ -127,7 +158,7 @@ void dijkstra(graphe *g, int n, int r)
         for (i = 0; i < n; i++){
           if(Su[i] != 0){ // Only take in account the existing values i.e different than 0
             // printf("MIN %d , %d =  %d \n",Su[i],Su[s],min(Su[i], Su[s]));
-            len = min(Su[i], Su[s] + mm); // Find the minimum between the weights until this vertex (Su[s] + mm) and the current sucessors
+            len = min(Su[i], Su[s] + mm); // Find the minimum between the weights until this vertex (Su[s] + mu) and the current sucessors
           }
           
         }
@@ -136,6 +167,7 @@ void dijkstra(graphe *g, int n, int r)
 
       // printf("Su = [%d %d %d %d %d %d] \n", Su[0], Su[1], Su[2], Su[3], Su[4], Su[5]);
       //printf("L = [%d %d %d %d %d %d] \n", L[0], L[1], L[2], L[3], L[4], L[5]);
+
       LifoPush(T, s); // Push into the stack to update 
     }
 
@@ -143,17 +175,62 @@ void dijkstra(graphe *g, int n, int r)
 
     //printf("S=[%d %d %d %d %d %d] \n ", S[0], S[1], S[2], S[3], S[4], S[5]);
   }
-
+/*
   printf("\n\n --------- END ------------------- \n");
   int rr;
 
   for (rr = 0; rr < n; rr++)
   {
-    printf("L[%d] = %d", rr, L[rr]);
+    if(L[rr] != infinite){
+      printf("Station: %s - L[%d] = %d\n", g->nomsommet[rr], rr, L[rr]);
+    }
+    
   }
 
   printf("\n");
-
+*/
   LifoTermine(T);// Finish the stack
 }
+
+
+
+
+
+/* ====================================================================== */
+/*! \fn graphe * SP(graphe * g, int x, int y)
+    \param g (entrée) : a network. The length of each arc must be stored in
+                        the field v_arc of the structure cell.
+    \param x (entrée) : a vertex of g (start).
+    \param y (entrée) : a vertex of g (arrival).
+    \return a shortest path from x to y in g.
+    \brief returns a shortest path from x to y in g.
+*/
+/* ====================================================================== */
+graphe * SP(graphe *g, int x, int y){
+  
+  graphe *g_1;
+
+  int nsom, narc, al_arcs, k, i, j;
+  pcell p;
+
+  dijkstra(g, x,y);
+
+  nsom = g->nsom;
+  narc = g->narc;
+  g_1 = InitGraphe(nsom, narc);
+  for (i = 0; i < nsom; i++) /* pour tout i sommet de g */
+  {
+    for (p = g->gamma[i]; p != NULL; p = p->next)
+    { /* pour tout j successeur de i */
+      j = p->som;
+      AjouteArcValue(g_1, j, i, p->v_arc);
+    } // for p
+  } // for i
+
+  return g_1;
+
+
+}
+
+
 
