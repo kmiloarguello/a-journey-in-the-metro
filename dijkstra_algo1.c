@@ -3,7 +3,7 @@
 #include "graphaux.h"
 #include "graphes.h"
 
-#define infinite 1000000
+#define infinite LONG_MAX
 #define initvalue 0
 #define USAGE "lit un graphe dans le fichier <filename> et genere une figure en PostScript dans <filename>.eps"
 
@@ -12,7 +12,7 @@ void dijkstra(graphe *g, int n, int r);
 int main(int argc, char **argv)
 {
   graphe *g;
-  char buf[256];
+  char buf[256 * 40];
 
   if (argc != 2)
   {
@@ -24,17 +24,17 @@ int main(int argc, char **argv)
 
   dijkstra(g, g->nsom, 0);
 
-  PlongementCirculaire(g, 150);    /* plonge le graphe dans le plan */
+  PlongementCirculaire(g, 300);    /* plonge le graphe dans le plan */
   sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
   EPSGraphe(g,                     /* genere une figure en PostScript */
             buf,                   // nom fichier
-            10,                    // rayon sommets
-            5,                     // taille fleches
-            60,                    // marge
-            1,                     // noms sommets
-            1,                     // valeurs sommets
-            1,                     // couleurs sommets
-            1                      // valeurs arcs
+            1,                    // rayon sommets
+            1,                     // taille fleches
+            10,                    // marge
+            0,                     // noms sommets
+            0,                     // valeurs sommets
+            0,                     // couleurs sommets
+            0                      // valeurs arcs
   );
 
   TermineGraphe(g);
@@ -87,7 +87,7 @@ void dijkstra(graphe *g, int n, int r)
     y = LifoPop(T);
 
     g->v_sommets[y] = 0;
-    printf("\n\nN: %s", g->nomsommet[y]);
+    printf("\n\nORIGIN: %s", g->nomsommet[y]);
 
     printf("L[y]=%d and len=%d \n", L[y], len);
     mm = min(L[y], len); // Compare the length of the previous sucessors and the current stack value 
@@ -109,7 +109,7 @@ void dijkstra(graphe *g, int n, int r)
 
       s = p->som; // s is the index of vertex
       len = p->v_arc; // len is the value of arc
-      printf("\n\nVertex: %s", g->nomsommet[s]);
+      printf("\n\nDEST: %s", g->nomsommet[s]);
 
       printf("s %d ", s);
       printf("len %d \n", len);
@@ -126,7 +126,7 @@ void dijkstra(graphe *g, int n, int r)
 
         for (i = 0; i < n; i++){
           if(Su[i] != 0){ // Only take in account the existing values i.e different than 0
-            printf("MIN %d , %d =  %d \n",Su[i],Su[s],min(Su[i], Su[s]));
+            // printf("MIN %d , %d =  %d \n",Su[i],Su[s],min(Su[i], Su[s]));
             len = min(Su[i], Su[s] + mm); // Find the minimum between the weights until this vertex (Su[s] + mm) and the current sucessors
           }
           
@@ -134,8 +134,8 @@ void dijkstra(graphe *g, int n, int r)
                   
       }
 
-      printf("Su = [%d %d %d %d %d %d] \n", Su[0], Su[1], Su[2], Su[3], Su[4], Su[5]);
-      printf("L = [%d %d %d %d %d %d] \n", L[0], L[1], L[2], L[3], L[4], L[5]);
+      // printf("Su = [%d %d %d %d %d %d] \n", Su[0], Su[1], Su[2], Su[3], Su[4], Su[5]);
+      //printf("L = [%d %d %d %d %d %d] \n", L[0], L[1], L[2], L[3], L[4], L[5]);
       LifoPush(T, s); // Push into the stack to update 
     }
 
@@ -144,13 +144,15 @@ void dijkstra(graphe *g, int n, int r)
     //printf("S=[%d %d %d %d %d %d] \n ", S[0], S[1], S[2], S[3], S[4], S[5]);
   }
 
-  // printf("\n\n --------- END ------------------- \n");
-  // int rr;
+  printf("\n\n --------- END ------------------- \n");
+  int rr;
 
-  // for (rr = 0; rr < n; rr++)
-  // {
-  //   printf("L[%d] = %d \n", rr, L[rr]);
-  // }
+  for (rr = 0; rr < n; rr++)
+  {
+    printf("L[%d] = %d", rr, L[rr]);
+  }
+
+  printf("\n");
 
   LifoTermine(T);// Finish the stack
 }

@@ -1,0 +1,5053 @@
+
+------------------------ Iteration 0
+
+
+ORIGIN: Abbesses
+L[y]=0 and len=0
+
+
+DEST: Lamarck Caulaincourt
+s 159 len 46
+mu=0
+SUMA=46
+
+
+DEST: Pigalle
+s 238 len 41
+mu=0
+SUMA=41
+
+
+------------------------ Iteration 1
+
+
+ORIGIN: Pigalle
+L[y]=41 and len=41
+
+
+DEST: Pigalle
+s 239 len 120
+mu=41
+SUMA=161
+
+
+DEST: Abbesses
+s 0 len 41
+
+
+DEST: Saint-Georges
+s 322 len 27
+mu=41
+SUMA=68
+
+
+------------------------ Iteration 2
+
+
+ORIGIN: Saint-Georges
+L[y]=68 and len=68
+
+
+DEST: Pigalle
+s 238 len 27
+
+
+DEST: Notre Dame de Lorette
+s 217 len 37
+mu=68
+SUMA=105
+
+
+------------------------ Iteration 3
+
+
+ORIGIN: Notre Dame de Lorette
+L[y]=105 and len=105
+
+
+DEST: Saint-Georges
+s 322 len 37
+
+
+DEST: Trinit d'Estienne d'Orves
+s 353 len 29
+mu=105
+SUMA=134
+
+
+------------------------ Iteration 4
+
+
+ORIGIN: Trinit d'Estienne d'Orves
+L[y]=134 and len=134
+
+
+DEST: Notre Dame de Lorette
+s 217 len 29
+
+
+DEST: Saint-Lazare
+s 325 len 69
+mu=134
+SUMA=203
+
+
+------------------------ Iteration 5
+
+
+ORIGIN: Saint-Lazare
+L[y]=203 and len=203
+
+
+DEST: Saint-Lazare
+s 326 len 120
+mu=203
+SUMA=323
+
+
+DEST: Saint-Lazare
+s 327 len 120
+mu=203
+SUMA=323
+
+
+DEST: Trinit d'Estienne d'Orves
+s 353 len 69
+
+
+DEST: Madeleine
+s 175 len 144
+mu=203
+SUMA=347
+
+
+------------------------ Iteration 6
+
+
+ORIGIN: Madeleine
+L[y]=347 and len=323
+
+
+DEST: Madeleine
+s 176 len 120
+mu=323
+SUMA=443
+
+
+DEST: Madeleine
+s 177 len 120
+mu=323
+SUMA=443
+
+
+DEST: Saint-Lazare
+s 325 len 144
+
+
+DEST: Concorde
+s 78 len 41
+mu=323
+SUMA=364
+
+
+------------------------ Iteration 7
+
+
+ORIGIN: Concorde
+L[y]=364 and len=443
+
+
+DEST: Concorde
+s 77 len 120
+mu=364
+SUMA=484
+
+
+DEST: Concorde
+s 79 len 120
+mu=364
+SUMA=484
+
+
+DEST: Madeleine
+s 175 len 41
+
+
+DEST: Assemble Nationale
+s 9 len 62
+mu=364
+SUMA=426
+
+
+------------------------ Iteration 8
+
+
+ORIGIN: Assemble Nationale
+L[y]=426 and len=484
+
+
+DEST: Concorde
+s 78 len 62
+
+
+DEST: Solfrino
+s 338 len 28
+mu=426
+SUMA=454
+
+
+------------------------ Iteration 9
+
+
+ORIGIN: Solfrino
+L[y]=454 and len=454
+
+
+DEST: Assemble Nationale
+s 9 len 28
+
+
+DEST: Rue du Bac
+s 308 len 33
+mu=454
+SUMA=487
+
+
+------------------------ Iteration 10
+
+
+ORIGIN: Rue du Bac
+L[y]=487 and len=487
+
+
+DEST: Solfrino
+s 338 len 33
+
+
+DEST: Svres Babylone
+s 347 len 29
+mu=487
+SUMA=516
+
+
+------------------------ Iteration 11
+
+
+ORIGIN: Svres Babylone
+L[y]=516 and len=516
+
+
+DEST: Svres Babylone
+s 346 len 120
+mu=516
+SUMA=636
+
+
+DEST: Rue du Bac
+s 308 len 29
+
+
+DEST: Rennes
+s 294 len 46
+mu=516
+SUMA=562
+
+
+------------------------ Iteration 12
+
+
+ORIGIN: Rennes
+L[y]=562 and len=636
+
+
+DEST: Svres Babylone
+s 347 len 46
+
+
+DEST: Notre-Dame-des-Champs
+s 218 len 38
+mu=562
+SUMA=600
+
+
+------------------------ Iteration 13
+
+
+ORIGIN: Notre-Dame-des-Champs
+L[y]=600 and len=600
+
+
+DEST: Rennes
+s 294 len 38
+
+
+DEST: Montparnasse Bienvenue
+s 206 len 45
+mu=600
+SUMA=645
+
+
+------------------------ Iteration 14
+
+
+ORIGIN: Montparnasse Bienvenue
+L[y]=645 and len=645
+
+
+DEST: Montparnasse Bienvenue
+s 209 len 120
+mu=645
+SUMA=765
+
+
+DEST: Montparnasse Bienvenue
+s 207 len 120
+mu=645
+SUMA=765
+
+
+DEST: Montparnasse Bienvenue
+s 208 len 120
+mu=645
+SUMA=765
+
+
+DEST: Notre-Dame-des-Champs
+s 218 len 45
+
+
+DEST: Falguire
+s 106 len 36
+mu=645
+SUMA=681
+
+
+------------------------ Iteration 15
+
+
+ORIGIN: Falguire
+L[y]=681 and len=765
+
+
+DEST: Montparnasse Bienvenue
+s 206 len 36
+
+
+DEST: Pasteur
+s 231 len 29
+mu=681
+SUMA=710
+
+
+------------------------ Iteration 16
+
+
+ORIGIN: Pasteur
+L[y]=710 and len=710
+
+
+DEST: Pasteur
+s 232 len 120
+mu=710
+SUMA=830
+
+
+DEST: Falguire
+s 106 len 29
+
+
+DEST: Volontaires
+s 368 len 40
+mu=710
+SUMA=750
+
+
+------------------------ Iteration 17
+
+
+ORIGIN: Volontaires
+L[y]=750 and len=750
+
+
+DEST: Pasteur
+s 231 len 40
+
+
+DEST: Vaugirard
+s 360 len 47
+mu=750
+SUMA=797
+
+
+------------------------ Iteration 18
+
+
+ORIGIN: Vaugirard
+L[y]=797 and len=797
+
+
+DEST: Volontaires
+s 368 len 47
+
+
+DEST: Convention
+s 80 len 49
+mu=797
+SUMA=846
+
+
+------------------------ Iteration 19
+
+
+ORIGIN: Convention
+L[y]=846 and len=846
+
+
+DEST: Vaugirard
+s 360 len 49
+
+
+DEST: Porte de Versailles
+s 274 len 41
+mu=846
+SUMA=887
+
+
+------------------------ Iteration 20
+
+
+ORIGIN: Porte de Versailles
+L[y]=887 and len=887
+
+
+DEST: Convention
+s 80 len 41
+
+
+DEST: Corentin Celton
+s 81 len 43
+mu=887
+SUMA=930
+
+
+------------------------ Iteration 21
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=930
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+mu=930
+SUMA=973
+
+
+------------------------ Iteration 22
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=973
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 23
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 24
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 25
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 26
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 27
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 28
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 29
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 30
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 31
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 32
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 33
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 34
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 35
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 36
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 37
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 38
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 39
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 40
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 41
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 42
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 43
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 44
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 45
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 46
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 47
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 48
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 49
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 50
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 51
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 52
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 53
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 54
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 55
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 56
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 57
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 58
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 59
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 60
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 61
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 62
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 63
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 64
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 65
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 66
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 67
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 68
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 69
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 70
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 71
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 72
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 73
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 74
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 75
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 76
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 77
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 78
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 79
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 80
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 81
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 82
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 83
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 84
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 85
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 86
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 87
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 88
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 89
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 90
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 91
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 92
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 93
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 94
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 95
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 96
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 97
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 98
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 99
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 100
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 101
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 102
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 103
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 104
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 105
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 106
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 107
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 108
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 109
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 110
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 111
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 112
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 113
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 114
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 115
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 116
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 117
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 118
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 119
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 120
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 121
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 122
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 123
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 124
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 125
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 126
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 127
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 128
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 129
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 130
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 131
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 132
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 133
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 134
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 135
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 136
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 137
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 138
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 139
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 140
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 141
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 142
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 143
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 144
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 145
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 146
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 147
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 148
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 149
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 150
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 151
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 152
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 153
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 154
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 155
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 156
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 157
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 158
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 159
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 160
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 161
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 162
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 163
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 164
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 165
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 166
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 167
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 168
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 169
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 170
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 171
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 172
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 173
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 174
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 175
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 176
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 177
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 178
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 179
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 180
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 181
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 182
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 183
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 184
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 185
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 186
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 187
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 188
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 189
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 190
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 191
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 192
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 193
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 194
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 195
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 196
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 197
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 198
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 199
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 200
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 201
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 202
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 203
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 204
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 205
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 206
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 207
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 208
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 209
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 210
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 211
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 212
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 213
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 214
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 215
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 216
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 217
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 218
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 219
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 220
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 221
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 222
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 223
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 224
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 225
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 226
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 227
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 228
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 229
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 230
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 231
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 232
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 233
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 234
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 235
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 236
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 237
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 238
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 239
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 240
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 241
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 242
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 243
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 244
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 245
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 246
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 247
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 248
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 249
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 250
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 251
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 252
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 253
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 254
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 255
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 256
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 257
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 258
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 259
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 260
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 261
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 262
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 263
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 264
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 265
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 266
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 267
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 268
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 269
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 270
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 271
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 272
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 273
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 274
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 275
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 276
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 277
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 278
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 279
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 280
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 281
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 282
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 283
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 284
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 285
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 286
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 287
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 288
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 289
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 290
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 291
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 292
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 293
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 294
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 295
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 296
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 297
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 298
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 299
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 300
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 301
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 302
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 303
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 304
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 305
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 306
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 307
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 308
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 309
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 310
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 311
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 312
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 313
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 314
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 315
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 316
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 317
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 318
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 319
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 320
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 321
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 322
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 323
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 324
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 325
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 326
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 327
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 328
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 329
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 330
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 331
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 332
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 333
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 334
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 335
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 336
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 337
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 338
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 339
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 340
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 341
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 342
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 343
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 344
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 345
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 346
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 347
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 348
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 349
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 350
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 351
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 352
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 353
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 354
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 355
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 356
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 357
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 358
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 359
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 360
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 361
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 362
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 363
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 364
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 365
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 366
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 367
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 368
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 369
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 370
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 371
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 372
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 373
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+------------------------ Iteration 374
+
+
+ORIGIN: Mairie d'Issy
+L[y]=973 and len=43
+
+
+DEST: Corentin Celton
+s 81 len 43
+
+
+------------------------ Iteration 375
+
+
+ORIGIN: Corentin Celton
+L[y]=930 and len=43
+
+
+DEST: Porte de Versailles
+s 274 len 43
+
+
+DEST: Mairie d'Issy
+s 178 len 43
+
+
+ --------- END -------------------
+L[0] = 0L[1] = 2147483647L[2] = 2147483647L[3] = 2147483647L[4] = 2147483647L[5] = 2147483647L[6] = 2147483647L[7] = 2147483647L[8] = 2147483647L[9] = 426L[10] = 2147483647L[11] = 2147483647L[12] = 2147483647L[13] = 2147483647L[14] = 2147483647L[15] = 2147483647L[16] = 2147483647L[17] = 2147483647L[18] = 2147483647L[19] = 2147483647L[20] = 2147483647L[21] = 2147483647L[22] = 2147483647L[23] = 2147483647L[24] = 2147483647L[25] = 2147483647L[26] = 2147483647L[27] = 2147483647L[28] = 2147483647L[29] = 2147483647L[30] = 2147483647L[31] = 2147483647L[32] = 2147483647L[33] = 2147483647L[34] = 2147483647L[35] = 2147483647L[36] = 2147483647L[37] = 2147483647L[38] = 2147483647L[39] = 2147483647L[40] = 2147483647L[41] = 2147483647L[42] = 2147483647L[43] = 2147483647L[44] = 2147483647L[45] = 2147483647L[46] = 2147483647L[47] = 2147483647L[48] = 2147483647L[49] = 2147483647L[50] = 2147483647L[51] = 2147483647L[52] = 2147483647L[53] = 2147483647L[54] = 2147483647L[55] = 2147483647L[56] = 2147483647L[57] = 2147483647L[58] = 2147483647L[59] = 2147483647L[60] = 2147483647L[61] = 2147483647L[62] = 2147483647L[63] = 2147483647L[64] = 2147483647L[65] = 2147483647L[66] = 2147483647L[67] = 2147483647L[68] = 2147483647L[69] = 2147483647L[70] = 2147483647L[71] = 2147483647L[72] = 2147483647L[73] = 2147483647L[74] = 2147483647L[75] = 2147483647L[76] = 2147483647L[77] = 484L[78] = 364L[79] = 484L[80] = 846L[81] = 930L[82] = 2147483647L[83] = 2147483647L[84] = 2147483647L[85] = 2147483647L[86] = 2147483647L[87] = 2147483647L[88] = 2147483647L[89] = 2147483647L[90] = 2147483647L[91] = 2147483647L[92] = 2147483647L[93] = 2147483647L[94] = 2147483647L[95] = 2147483647L[96] = 2147483647L[97] = 2147483647L[98] = 2147483647L[99] = 2147483647L[100] = 2147483647L[101] = 2147483647L[102] = 2147483647L[103] = 2147483647L[104] = 2147483647L[105] = 2147483647L[106] = 681L[107] = 2147483647L[108] = 2147483647L[109] = 2147483647L[110] = 2147483647L[111] = 2147483647L[112] = 2147483647L[113] = 2147483647L[114] = 2147483647L[115] = 2147483647L[116] = 2147483647L[117] = 2147483647L[118] = 2147483647L[119] = 2147483647L[120] = 2147483647L[121] = 2147483647L[122] = 2147483647L[123] = 2147483647L[124] = 2147483647L[125] = 2147483647L[126] = 2147483647L[127] = 2147483647L[128] = 2147483647L[129] = 2147483647L[130] = 2147483647L[131] = 2147483647L[132] = 2147483647L[133] = 2147483647L[134] = 2147483647L[135] = 2147483647L[136] = 2147483647L[137] = 2147483647L[138] = 2147483647L[139] = 2147483647L[140] = 2147483647L[141] = 2147483647L[142] = 2147483647L[143] = 2147483647L[144] = 2147483647L[145] = 2147483647L[146] = 2147483647L[147] = 2147483647L[148] = 2147483647L[149] = 2147483647L[150] = 2147483647L[151] = 2147483647L[152] = 2147483647L[153] = 2147483647L[154] = 2147483647L[155] = 2147483647L[156] = 2147483647L[157] = 2147483647L[158] = 2147483647L[159] = 46L[160] = 2147483647L[161] = 2147483647L[162] = 2147483647L[163] = 2147483647L[164] = 2147483647L[165] = 2147483647L[166] = 2147483647L[167] = 2147483647L[168] = 2147483647L[169] = 2147483647L[170] = 2147483647L[171] = 2147483647L[172] = 2147483647L[173] = 2147483647L[174] = 2147483647L[175] = 347L[176] = 443L[177] = 443L[178] = 973L[179] = 2147483647L[180] = 2147483647L[181] = 2147483647L[182] = 2147483647L[183] = 2147483647L[184] = 2147483647L[185] = 2147483647L[186] = 2147483647L[187] = 2147483647L[188] = 2147483647L[189] = 2147483647L[190] = 2147483647L[191] = 2147483647L[192] = 2147483647L[193] = 2147483647L[194] = 2147483647L[195] = 2147483647L[196] = 2147483647L[197] = 2147483647L[198] = 2147483647L[199] = 2147483647L[200] = 2147483647L[201] = 2147483647L[202] = 2147483647L[203] = 2147483647L[204] = 2147483647L[205] = 2147483647L[206] = 645L[207] = 765L[208] = 765L[209] = 765L[210] = 2147483647L[211] = 2147483647L[212] = 2147483647L[213] = 2147483647L[214] = 2147483647L[215] = 2147483647L[216] = 2147483647L[217] = 105L[218] = 600L[219] = 2147483647L[220] = 2147483647L[221] = 2147483647L[222] = 2147483647L[223] = 2147483647L[224] = 2147483647L[225] = 2147483647L[226] = 2147483647L[227] = 2147483647L[228] = 2147483647L[229] = 2147483647L[230] = 2147483647L[231] = 710L[232] = 830L[233] = 2147483647L[234] = 2147483647L[235] = 2147483647L[236] = 2147483647L[237] = 2147483647L[238] = 41L[239] = 161L[240] = 2147483647L[241] = 2147483647L[242] = 2147483647L[243] = 2147483647L[244] = 2147483647L[245] = 2147483647L[246] = 2147483647L[247] = 2147483647L[248] = 2147483647L[249] = 2147483647L[250] = 2147483647L[251] = 2147483647L[252] = 2147483647L[253] = 2147483647L[254] = 2147483647L[255] = 2147483647L[256] = 2147483647L[257] = 2147483647L[258] = 2147483647L[259] = 2147483647L[260] = 2147483647L[261] = 2147483647L[262] = 2147483647L[263] = 2147483647L[264] = 2147483647L[265] = 2147483647L[266] = 2147483647L[267] = 2147483647L[268] = 2147483647L[269] = 2147483647L[270] = 2147483647L[271] = 2147483647L[272] = 2147483647L[273] = 2147483647L[274] = 887L[275] = 2147483647L[276] = 2147483647L[277] = 2147483647L[278] = 2147483647L[279] = 2147483647L[280] = 2147483647L[281] = 2147483647L[282] = 2147483647L[283] = 2147483647L[284] = 2147483647L[285] = 2147483647L[286] = 2147483647L[287] = 2147483647L[288] = 2147483647L[289] = 2147483647L[290] = 2147483647L[291] = 2147483647L[292] = 2147483647L[293] = 2147483647L[294] = 562L[295] = 2147483647L[296] = 2147483647L[297] = 2147483647L[298] = 2147483647L[299] = 2147483647L[300] = 2147483647L[301] = 2147483647L[302] = 2147483647L[303] = 2147483647L[304] = 2147483647L[305] = 2147483647L[306] = 2147483647L[307] = 2147483647L[308] = 487L[309] = 2147483647L[310] = 2147483647L[311] = 2147483647L[312] = 2147483647L[313] = 2147483647L[314] = 2147483647L[315] = 2147483647L[316] = 2147483647L[317] = 2147483647L[318] = 2147483647L[319] = 2147483647L[320] = 2147483647L[321] = 2147483647L[322] = 68L[323] = 2147483647L[324] = 2147483647L[325] = 203L[326] = 323L[327] = 323L[328] = 2147483647L[329] = 2147483647L[330] = 2147483647L[331] = 2147483647L[332] = 2147483647L[333] = 2147483647L[334] = 2147483647L[335] = 2147483647L[336] = 2147483647L[337] = 2147483647L[338] = 454L[339] = 2147483647L[340] = 2147483647L[341] = 2147483647L[342] = 2147483647L[343] = 2147483647L[344] = 2147483647L[345] = 2147483647L[346] = 636L[347] = 516L[348] = 2147483647L[349] = 2147483647L[350] = 2147483647L[351] = 2147483647L[352] = 2147483647L[353] = 134L[354] = 2147483647L[355] = 2147483647L[356] = 2147483647L[357] = 2147483647L[358] = 2147483647L[359] = 2147483647L[360] = 797L[361] = 2147483647L[362] = 2147483647L[363] = 2147483647L[364] = 2147483647L[365] = 2147483647L[366] = 2147483647L[367] = 2147483647L[368] = 750L[369] = 2147483647L[370] = 2147483647L[371] = 2147483647L[372] = 2147483647L[373] = 2147483647L[374] = 2147483647L[375] = 2147483647
