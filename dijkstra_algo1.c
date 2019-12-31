@@ -24,7 +24,15 @@ int main(int argc, char **argv)
 
   g = ReadGraphe(argv[1]); /* lit le graphe a partir du fichier */
 
-  gf = dijkstra(g, 0, 5);
+  int initial_vertex, final_vertex;
+
+  printf("\n\nEnter the initial vertex: ");
+  scanf("%d", &initial_vertex);
+
+  printf("\n\nEnter the destination vertex: ");
+  scanf("%d", &final_vertex);
+    
+  gf = dijkstra(g, initial_vertex, final_vertex);
 
   PlongementCirculaire(gf, 300);   /* plonge le graphe dans le plan */
   sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
@@ -33,10 +41,10 @@ int main(int argc, char **argv)
             1,                     // rayon sommets
             1,                     // taille fleches
             10,                    // marge
-            0,                     // noms sommets
+            1,                     // noms sommets
             0,                     // valeurs sommets
             0,                     // couleurs sommets
-            0                      // valeurs arcs
+            1                      // valeurs arcs
   );
 
   TermineGraphe(g);
@@ -63,8 +71,8 @@ graphe *dijkstra(graphe *g, int r, int t)
   int n = g->nsom;
   int a, b;
   pcell p;
-  boolean *S;
-  boolean duplicated = FALSE; // Helps to prevents previous vertices
+  //boolean *S;
+  //boolean duplicated = FALSE; // Helps to prevents previous vertices
 
   T = CreeLifoVide(n);
 
@@ -122,6 +130,7 @@ graphe *dijkstra(graphe *g, int r, int t)
     // if(duplicated) break;
 
     printf("\n\nORIGIN: %s", g->nomsommet[y]);
+    printf("Vertex %d ", y);
     // printf("s=%d len=%d and t=%d \n", s, len, t);
 
     g->v_sommets[y] = 0;
@@ -189,17 +198,17 @@ graphe *dijkstra(graphe *g, int r, int t)
     k++;
   }
 
-  // printf("\n\n --------- END ------------------- \n");
-  // int rr, counter_path = 0;
+  printf("\n\n --------- END ------------------- \n");
+  int rr, counter_path = 0;
 
-  // for (rr = 0; rr < n; rr++)
-  // {
-  //   // if (L[rr] != infinite)
-  //   // {
-  //   printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
-  //   counter_path += 1;
-  //   // }
-  // }
+  for (rr = 0; rr < n; rr++)
+  {
+    // if (L[rr] != infinite)
+    // {
+    printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
+    // counter_path += 1;
+    // }
+  }
 
   // int Lf[counter_path];
 
