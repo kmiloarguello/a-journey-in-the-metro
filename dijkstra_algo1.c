@@ -1,3 +1,13 @@
+/**
+ * Graph & Algorithms Course
+ * ESIEE Paris
+ * 2019
+ * 
+ * Student: ARGUELLO Camilo
+ * 
+ * This code calculates the shortest path for a given graph.
+ * */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "graphaux.h"
@@ -58,6 +68,7 @@ int main(int argc, char **argv)
  * @param{graphe} *g a network. The length of each arc must be stored in 
  *                    the field v_arc of the structure cell.
  * @param{int} r a vertex of g.
+ * @param{int} t is the destination vertex.
  * @brief compute, for each vertex y of g, the length Dx(y)of a shortest path
  *        from x to y. This length is stored in the field 
  *        v_sommets of the structure g.
@@ -84,14 +95,16 @@ graphe *dijkstra(graphe *g, int r, int t)
   {
     L[i] = infinite;
     // We want to assure that only takes sucessors and not visited
-    g->v_sommets[i] = -1;
+    // add i into T
+    LifoPush(T, i);
+    //   g->v_sommets[i] = -1;
   }
 
   // Initializing values
-  LifoPush(T, r);      // Putting the initial vertex r into the stack
+  // LifoPush(T, r);      // Putting the initial vertex r into the stack
   L[r] = initvalue;    // Add the value 0 to the initial vertex
   k = initvalue;       // Initiating counter
-  g->v_sommets[r] = 0; // Putting the value 0 to the vertex
+ //  g->v_sommets[r] = 0; // Putting the value 0 to the vertex
   int mm = initvalue;  // MU Initiating weight (sum of the shortest path)
 
   printf("\n\n************************************************");
@@ -113,38 +126,22 @@ graphe *dijkstra(graphe *g, int r, int t)
     }
 
     y = LifoPop(T);
-
-    // We need to assure than there is not previous values equals
-    // That's mean no vertices with the same value than other
-    // This checks runs in O(n^2)
-    // for (a = 0; a < n; a++)
-    // {
-    //   for (b= a + 1; b <n; b++){
-    //     if(L[a] == L[b] && L[a] != infinite){
-    //       printf("It's impossible find the destination.\n");
-    //       duplicated = TRUE;
-    //       break;
-    //     }
-    //   }
-    // }
-    // if(duplicated) break;
-
-    printf("\n\nORIGIN: %s", g->nomsommet[y]);
-    printf("Vertex %d ", y);
-    // printf("s=%d len=%d and t=%d \n", s, len, t);
-
     g->v_sommets[y] = 0;
     mm = min(L[y], mm + len); // Compare the length of the previous sucessors and the current stack value
                          //to determine the next vertex to follow the sortest path
 
     printf("MM=%d", mm);
-    // if (t == y)
-    // {
-    //   printf("\n\n************************************************");
-    //   printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
-    //   printf("************************************************\n\n");
-    //   break;
-    // }
+    
+    printf("\n\nORIGIN: %s", g->nomsommet[y]);
+    printf("Vertex %d ", y);
+
+    if (t == y)
+    {
+      printf("\n\n************************************************");
+      printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
+      printf("************************************************\n\n");
+     // break;
+    }
 
     if (g->gamma[y] == NULL)
       break;
@@ -187,6 +184,8 @@ graphe *dijkstra(graphe *g, int r, int t)
 
         // After founded the minimum, just check that is a correct successor
         // And update the index of next vertex which later will be pushed into the stack
+        // TODO: Here I am just checking the values of successor, and compared with the minimum arc. 
+        //       The goal is compare the sum of all the values until here with something else 
         if (arc_min == len)
         {
           next_vertex = s;
@@ -200,39 +199,14 @@ graphe *dijkstra(graphe *g, int r, int t)
   }
 
   printf("\n\n --------- END ------------------- \n");
-  int rr, counter_path = 0;
+  int rr;
 
   for (rr = 0; rr < n; rr++)
   {
-    // if (L[rr] != infinite)
-    // {
     printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
-    // counter_path += 1;
-    // }
   }
 
-  // int Lf[counter_path];
 
-  //printf("%ld", sizeof(counter_path));
-  // graphe *g_1;
-
-  // int n_vert, n_arcs, e, f;
-  // pcell pc;
-
-  // n_vert = counter_path;
-  // n_arcs = counter_path;
-  // //n_arcs = counter_path;
-
-  // g_1 = InitGraphe(n_vert, n_arcs);
-
-  // for (e = 0; e < n_vert; e++) /* pour tout i sommet de g */
-  // {
-  //   for (pc = g->gamma[i]; pc != NULL; pc = pc->next)
-  //   { /* pour tout j successeur de i */
-  //     f = pc->som;
-  //     AjouteArcValue(g_1, j, i, p->v_arc);
-  //   } // for p
-  // } // for i
 
   LifoTermine(T); // Finish the stack
 
