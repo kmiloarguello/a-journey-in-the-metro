@@ -39,7 +39,7 @@ int main(int argc, char **argv)
   EPSGraphe(gf,                    /* genere une figure en PostScript */
             buf,                   // nom fichier
             1,                     // rayon sommets
-            1,                     // taille fleches
+            3,                     // taille fleches
             10,                    // marge
             1,                     // noms sommets
             0,                     // valeurs sommets
@@ -134,16 +134,17 @@ graphe *dijkstra(graphe *g, int r, int t)
     // printf("s=%d len=%d and t=%d \n", s, len, t);
 
     g->v_sommets[y] = 0;
-    mm = min(L[y], len); // Compare the length of the previous sucessors and the current stack value
+    mm = min(L[y], mm + len); // Compare the length of the previous sucessors and the current stack value
                          //to determine the next vertex to follow the sortest path
 
-    if (t == y)
-    {
-      printf("\n\n************************************************");
-      printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
-      printf("************************************************\n\n");
-      break;
-    }
+    printf("MM=%d", mm);
+    // if (t == y)
+    // {
+    //   printf("\n\n************************************************");
+    //   printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
+    //   printf("************************************************\n\n");
+    //   break;
+    // }
 
     if (g->gamma[y] == NULL)
       break;
