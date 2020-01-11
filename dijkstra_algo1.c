@@ -67,8 +67,7 @@ int main(int argc, char **argv)
  * \fn void Dijkstra(graphe * g, int x)
  * @param{graphe} *g a network. The length of each arc must be stored in 
  *                    the field v_arc of the structure cell.
- * @param{int} r a vertex of g.
- * @param{int} t is the destination vertex.
+ * @param{int} x a vertex of g.
  * @brief compute, for each vertex y of g, the length Dx(y)of a shortest path
  *        from x to y. This length is stored in the field 
  *        v_sommets of the structure g.
@@ -76,7 +75,7 @@ int main(int argc, char **argv)
  **/
 graphe *dijkstra(graphe *g, int x)
 {
-  int i, k, y,y_p, mmu;
+  int i, k, z,y,y_p, v, mmu, c;
   boolean* S;
   int n = g->nsom;
   pcell p;
@@ -92,26 +91,51 @@ graphe *dijkstra(graphe *g, int x)
   L[x] = 0;
   k = 0;
   mmu = 0;
+  y = x;
 
   while(k < n && mmu != infinite){
 
-    printf("%d %d ", y , L[y]);
+    //printf("%d %d ", y , L[y]);
 
     S[y] = FALSE;
-
-    y_p = S[y];
-    L[y_p] = min(L[y],y);
-    k++;
-    mmu=L[y_p];
+    c = 0;    
     
-    for (p = g->gamma[y_p]; p != NULL; p = p->next)
+    for (p = g->gamma[y]; p != NULL; p = p->next)
     {
-      if(S[y_p] == TRUE){
-        L[y_p] = min(L[y], L[y_p] + p->v_arc);
-      }
+      v = p->v_arc;
+      z = p->som;
+
+      if(L[z] > v + mmu) L[z] = v + mmu;
       
-      //printf("L[y_p] = %d\n", L[y_p]);
+      if(c == 0) mmu = L[z];      
+      mmu = min(mmu,L[z]);
+
+      c++;
+      printf("y and L[y] = %d and %d\n", y, L[y]);
     }
+
+    c == 0;
+    int temp;
+
+    for(int l = 0; l<n ; l++)
+    {
+      if(S[l] && L[l] != infinite){
+        if(c == 0) temp = L[l];
+        if(temp <= L[l]) y = l;
+        c++;
+      }
+    }
+    
+    k++;
+
+  }
+
+    printf("\n\n --------- END ------------------- \n");
+  int rr;
+
+  for (rr = 0; rr < n; rr++)
+  {
+    printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
   }
 
   
