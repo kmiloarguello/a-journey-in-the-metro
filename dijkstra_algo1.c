@@ -36,13 +36,13 @@ int main(int argc, char **argv)
 
   int initial_vertex, final_vertex;
 
-  printf("\n\nEnter the initial vertex: ");
-  scanf("%d", &initial_vertex);
+  // printf("\n\nEnter the initial vertex: ");
+  // scanf("%d", &initial_vertex);
 
   // printf("\n\nEnter the destination vertex: ");
   // scanf("%d", &final_vertex);
-    
-  gf = dijkstra(g, initial_vertex);
+
+  gf = dijkstra(g, 0);
 
   PlongementCirculaire(gf, 300);   /* plonge le graphe dans le plan */
   sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
@@ -75,61 +75,86 @@ int main(int argc, char **argv)
  **/
 graphe *dijkstra(graphe *g, int x)
 {
-  int i, k, z,y,y_p, v, mmu, c;
-  boolean* S;
+  int i, k, vertex, y, y_p, arc, miu, c;
+  boolean *S;
   int n = g->nsom;
   pcell p;
 
   S = EnsembleVide(n);
   int L[n];
 
-  for(y=0;y<n;y++){
+  for (y = 0; y < n; y++)
+  {
     L[y] = infinite;
     S[y] = TRUE;
   }
 
   L[x] = 0;
   k = 0;
-  mmu = 0;
+  miu = 0;
   y = x;
 
-  while(k < n && mmu != infinite){
-
-    //printf("%d %d ", y , L[y]);
-
+  while (k < n && miu != infinite)
+  {
+    printf("\n\n------------------------ Iteration %d \n", k);
     S[y] = FALSE;
-    c = 0;    
-    
+
+    printf("\n\nORIGIN: %s", g->nomsommet[y]);
+    printf("Vertex %d ", y);
+
+    miu = min(L[y] , arc + miu);
+
     for (p = g->gamma[y]; p != NULL; p = p->next)
     {
-      v = p->v_arc;
-      z = p->som;
+      vertex = p->som;
+      arc = p->v_arc;
 
-      if(L[z] > v + mmu) L[z] = v + mmu;
+      if(S[vertex]){
+        printf("\n\nNEXT: %s", g->nomsommet[vertex]);
+        printf("Vertex %d ", vertex);
+        printf("Distance: %d \n", arc);
+        printf("Miu: %d \n", miu);
       
-      if(c == 0) mmu = L[z];      
-      mmu = min(mmu,L[z]);
+        L[vertex] = arc + miu;
+        miu = min(L[vertex],miu);
 
-      c++;
-      printf("y and L[y] = %d and %d\n", y, L[y]);
+        printf("L[%d]=%d \n",y,L[y]);
+
+        
+
+      }
+
     }
+    printf("y=%d, L=[%d %d %d %d %d %d] \n", y, L[0], L[1], L[2], L[3], L[3], L[4]);
+    printf("S=[%d %d %d %d %d %d]\n",S[0],S[1],S[2],S[3],S[3],S[4]);
 
-    c == 0;
+    // Helpers to find the minimum
     int temp;
+    int d=0;
+    int next_vertex; // Index of next vertex
 
-    for(int l = 0; l<n ; l++)
+    for (int l = 0; l < n; l++)
     {
-      if(S[l] && L[l] != infinite){
-        if(c == 0) temp = L[l];
-        if(temp <= L[l]) y = l;
-        c++;
+      // Only taking the values beloging to the set S
+      if (S[l] && L[l] != infinite)
+      {
+        if (d == 0){
+          temp = L[l];
+          next_vertex = l;
+        }
+        
+        if(L[l] < temp){
+          next_vertex = l;
+        }
+
+        d++;
+
       }
     }
-    
+    y = next_vertex;
     k++;
-
   }
-
+  /*
     printf("\n\n --------- END ------------------- \n");
   int rr;
 
@@ -138,147 +163,9 @@ graphe *dijkstra(graphe *g, int x)
     printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
   }
 
-  
+  */
 
- // printf("Done");
-
-
-
-
-
-//   Lifo *T;
-//   int i, s, k, y, next_vertex, y_p, len, mini = 0;
-//   int min = 0;
-//   int n = g->nsom;
-//   int a, b;
-//   pcell p;
-//   //boolean *S;
-//   //boolean duplicated = FALSE; // Helps to prevents previous vertices
-
-//   T = CreeLifoVide(n);
-
-//   int L[n]; // Array of all the distances between all the vertex starting from r
-
-//   // Initialize the L array with infinite values
-//   // The idea is to start switching each value by the successors
-//   for (i = 0; i < n; i++)
-//   {
-//     L[i] = infinite;
-//     // We want to assure that only takes sucessors and not visited
-//     // add i into T
-//     LifoPush(T, i);
-//     //   g->v_sommets[i] = -1;
-//   }
-
-//   // Initializing values
-//   // LifoPush(T, r);      // Putting the initial vertex r into the stack
-//   L[r] = initvalue;    // Add the value 0 to the initial vertex
-//   k = initvalue;       // Initiating counter
-//  //  g->v_sommets[r] = 0; // Putting the value 0 to the vertex
-//   int mm = initvalue;  // MU Initiating weight (sum of the shortest path)
-
-//   printf("\n\n************************************************");
-//   printf("\n\nYou depart from: %s", g->nomsommet[r]);
-//   printf("Your destination: %s \n\n", g->nomsommet[t]);
-//   printf("************************************************\n\n");
-
-//   while (k < n && mm != infinite)
-//   {
-//     printf("\n\n------------------------ Iteration %d \n", k);
-//     // This Su[n] is used for count the minimun of sucessors for each iteration.
-//     // The idea is that each iteration contains an array of zeros Su=[0,0,0,0,0,0]
-//     // And switching only the current sucessors to determine the minimum value
-//     // Here, the initialization
-//     int Su[n];
-//     for (i = 0; i < n; i++)
-//     {
-//       Su[i] = infinite;
-//     }
-
-//     y = LifoPop(T);
-//     g->v_sommets[y] = 0;
-//     mm = min(L[y], mm + len); // Compare the length of the previous sucessors and the current stack value
-//                          //to determine the next vertex to follow the sortest path
-
-//     printf("MM=%d", mm);
-    
-//     printf("\n\nORIGIN: %s", g->nomsommet[y]);
-//     printf("Vertex %d ", y);
-
-//     if (t == y)
-//     {
-//       printf("\n\n************************************************");
-//       printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
-//       printf("************************************************\n\n");
-//      // break;
-//     }
-
-//     if (g->gamma[y] == NULL)
-//       break;
-
-//     // For all the successors
-//     for (p = g->gamma[y]; p != NULL; p = p->next)
-//     {
-
-//       s = p->som;     // s is the index of vertex
-//       len = p->v_arc; // len is the value of arc
-
-//       printf("\n\nNEXT: %s", g->nomsommet[s]);
-//       printf("Vertex %d ", s);
-//       printf("Distance: %d \n", len);
-
-//       // Only checks non visited vertices
-//       if (g->v_sommets[s] == -1)
-//       {
-
-//         printf("mu=%d\n", mm);
-//         printf("SUMA=%d\n", mm + len);
-
-//         L[s] = mm + len; // Put into the main L array the values of the lengths
-//         Su[s] = len;     // Put into the temporal array Su to calculate the min between successors
-
-//         // Defining the minimum of sucessors
-//         int ii, arc_min = 0; // arc_min contains the value of the minimum arc
-
-//         arc_min = Su[0]; // We suppose that the first arc is the minimum
-
-//         // Check if the previous arc_min is the minimum value
-//         // If there is another one lower update arc_min
-//         for (ii = 1; ii < n; ii++)
-//         {
-//           if (Su[ii] < arc_min)
-//           {
-//             arc_min = Su[ii];
-//           }
-//         }
-
-//         // After founded the minimum, just check that is a correct successor
-//         // And update the index of next vertex which later will be pushed into the stack
-//         // TODO: Here I am just checking the values of successor, and compared with the minimum arc. 
-//         //       The goal is compare the sum of all the values until here with something else 
-//         if (arc_min == len)
-//         {
-//           next_vertex = s;
-//         }
-
-//         LifoPush(T, next_vertex); // Push into the stack to update
-//       }
-//     }
-
-//     k++;
-//   }
-
-//   printf("\n\n --------- END ------------------- \n");
-//   int rr;
-
-//   for (rr = 0; rr < n; rr++)
-//   {
-//     printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
-//   }
-
-
-
-//   LifoTermine(T); // Finish the stack
+  // printf("Done");
 
   return g;
 }
