@@ -102,35 +102,26 @@ graphe *dijkstra(graphe *g, int x)
     printf("\n\nORIGIN: %s", g->nomsommet[y]);
     printf("Vertex %d ", y);
 
-    miu = min(L[y] , arc + miu);
+    miu = min(L[y], arc + miu);
 
     for (p = g->gamma[y]; p != NULL; p = p->next)
     {
       vertex = p->som;
       arc = p->v_arc;
 
-      if(S[vertex]){
+      if (S[vertex])
+      {
         printf("\n\nNEXT: %s", g->nomsommet[vertex]);
         printf("Vertex %d ", vertex);
         printf("Distance: %d \n", arc);
-        printf("Miu: %d \n", miu);
-      
+
         L[vertex] = arc + miu;
-        miu = min(L[vertex],miu);
-
-        printf("L[%d]=%d \n",y,L[y]);
-
-        
-
+        miu = min(L[vertex], miu);
       }
-
     }
-    printf("y=%d, L=[%d %d %d %d %d %d] \n", y, L[0], L[1], L[2], L[3], L[3], L[4]);
-    printf("S=[%d %d %d %d %d %d]\n",S[0],S[1],S[2],S[3],S[3],S[4]);
-
     // Helpers to find the minimum
     int temp;
-    int d=0;
+    int d = 0;
     int next_vertex; // Index of next vertex
 
     for (int l = 0; l < n; l++)
@@ -138,34 +129,31 @@ graphe *dijkstra(graphe *g, int x)
       // Only taking the values beloging to the set S
       if (S[l] && L[l] != infinite)
       {
-        if (d == 0){
+        if (d == 0)
+        {
           temp = L[l];
           next_vertex = l;
         }
-        
-        if(L[l] < temp){
+
+        if (L[l] <= temp)
+        {
           next_vertex = l;
         }
 
         d++;
-
       }
     }
     y = next_vertex;
     k++;
   }
-  /*
-    printf("\n\n --------- END ------------------- \n");
+
+  printf("\n\n --------- END ------------------- \n");
   int rr;
 
   for (rr = 0; rr < n; rr++)
   {
     printf("L[%d] = %d Station: %s", rr, L[rr], g->nomsommet[rr]);
   }
-
-  */
-
-  // printf("Done");
 
   return g;
 }
