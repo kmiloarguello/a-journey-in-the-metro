@@ -18,13 +18,11 @@
 #define USAGE "lit un graphe dans le fichier <filename> et genere une figure en PostScript dans <filename>.eps"
 
 int *table_dijkstra;
-graphe *final_graph;
 void dijkstra(graphe *g, int x);
 graphe *SP(graphe *g, int x, int y);
-int destination;
 
 // Helpers functions
-graphe *init_shortest_path(graphe *g);
+void ask_user_vertices(graphe *g);
 
 int main(int argc, char **argv)
 {
@@ -39,11 +37,39 @@ int main(int argc, char **argv)
 
   g = ReadGraphe(argv[1]); /* lit le graphe a partir du fichier */
 
-  init_shortest_path(g);
+  dijkstra(g, 3);
+//   graphe *g_1 = Symetrique(g);
 
-  PlongementCirculaire(final_graph, 150);    /* plonge le graphe dans le plan */
+//   int arc, ver_1,arc_1, ver, n_1,n;
+//   n_1 = g_1->nsom;
+//   n= g->nsom;
+//   pcell p_1,p;
+
+//   for (int i = 0; i < n_1; i++)
+//   {
+//       // printf("name=%s", g_1->nomsommet[1]);
+//     printf("Vertex %d\n",i);
+//     for (p_1 = g_1->gamma[i]; p_1 != NULL; p_1 = p_1->next)
+//     {
+//       arc_1 = p_1->v_arc;
+//       ver_1 = p_1->som;
+
+//       printf("pre=%d\n", ver_1);
+//     }
+// printf("------------------\n");
+// //     for (p = g->gamma[i]; p != NULL; p = p->next)
+// //     {
+// //       arc = p->v_arc;
+// //       ver = p->som;
+
+// //       printf("des=%d\n", ver);
+// //     }
+
+//   }
+
+  PlongementCirculaire(g, 150);  /* plonge le graphe dans le plan */
   sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
-  EPSGraphe(final_graph,                     /* genere une figure en PostScript */
+  EPSGraphe(g,                   /* genere une figure en PostScript */
             buf,                   // nom fichier
             2,                     // rayon sommets
             3,                     // taille fleches
@@ -55,7 +81,6 @@ int main(int argc, char **argv)
   );
 
   TermineGraphe(g);
-  TermineGraphe(final_graph);
   return 0;
 } /* main() */
 
@@ -63,10 +88,8 @@ int main(int argc, char **argv)
  * Ask the initial and final vertex to the user
  * Then, Load SP() function
  * */
-graphe *init_shortest_path(graphe *g)
+void ask_user_vertices(graphe *g)
 {
-
-  graphe *gf;
 
   int initial_vertex, final_vertex;
 
@@ -76,9 +99,7 @@ graphe *init_shortest_path(graphe *g)
   printf("\n\nEnter the destination vertex: ");
   scanf("%d", &final_vertex);
 
-  gf = SP(g, initial_vertex, final_vertex);
-
-  return gf;
+  SP(g, initial_vertex, final_vertex);
 }
 
 /* ====================================================================== */
@@ -99,27 +120,25 @@ graphe *SP(graphe *g, int x, int y)
   printf("Your destination: %s \n\n", g->nomsommet[y]);
   printf("************************************************\n\n");
 
-  destination = y;
+  graphe *g_1;
 
-  dijkstra(g, x);
+  g_1 = Symetrique(g);
 
-  // int arc, ver, n;
-  // n = g->nsom;
-  // pcell p;
+  int arc, ver, n;
+  n = g_1->nsom;
+  pcell p;
 
-  // for (int i = 0; i < n; i++)
-  // {
-  //   for (p = g->gamma[i]; p != NULL; p = p->next)
-  //   {
-  //     arc = p->v_arc;
-  //     ver = p->som;
+  for (int i = 0; i < n; i++)
+  {
+    // printf("name=%s", g_1->nomsommet[0]);
+    for (p = g_1->gamma[i]; p != NULL; p = p->next)
+    {
+      arc = p->v_arc;
+      ver = p->som;
 
-  //     printf("vertex=%d and edge=%d and i=%d\n",ver,arc,i);
-  // //   //   // if(arc == table_dijkstra[i]){
-
-  // //   //   // }
-
-  // //   // }
+      printf("vertex=%d and edge=%d and i=%d\n", ver, arc, i);
+    }
+  }
 
   // //   printf("Table[%d] = %d\n", i, table_dijkstra[i]);
   // //   // if (t == y)
@@ -149,7 +168,7 @@ graphe *SP(graphe *g, int x, int y)
  **/
 void dijkstra(graphe *g, int x)
 {
-  int i, k, vertex, y, y_p, arc, miu, c;
+  int i, k, vertex, y, arc, miu;
   boolean *S;
   int n = g->nsom;
   pcell p;
@@ -169,27 +188,12 @@ void dijkstra(graphe *g, int x)
   miu = 0;
   y = x;
 
-
-  // For new graph
-  int nsom = g->nsom;
-  int narc = g->narc;
-  final_graph = InitGraphe(nsom, narc);
-
   while (k < n && miu != infinite)
   {
     S[y] = FALSE;
-    printf("Station: %s", g->nomsommet[y]);
 
     // Distance traversed or cost
     miu = min(L[y], arc + miu);
-
-    if (destination == y)
-    {
-      printf("\n\n************************************************");
-      printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
-      printf("************************************************\n\n");
-      break;
-    }
 
     if (g->gamma[y] == NULL)
       break;
@@ -203,8 +207,6 @@ void dijkstra(graphe *g, int x)
       if (S[vertex])
       {
         L[vertex] = arc + miu;     // Assign the cost to the vertex
-        miu = min(L[vertex], miu); // Update the cost
-        AjouteArcValue(final_graph, y, vertex, arc);
       }
     }
 
@@ -243,12 +245,14 @@ void dijkstra(graphe *g, int x)
   }
 
   printf("\n\n ------------ DIJKSTRA ------------------- \n");
-  int rr;
-
-  for (rr = 0; rr < n; rr++)
+  printf(" L[");
+  for (int i = 0; i < n; i++)
   {
-    printf("L[%d] = %d\n", rr, L[rr]);
+    printf(" %d ", L[i]);
   }
+  printf("]");
+  printf("\n ------------ END DIJKSTRA ------------------- \n");
 
   table_dijkstra = L;
+  // ask_user_vertices(g);
 }
