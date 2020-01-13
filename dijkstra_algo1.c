@@ -18,11 +18,15 @@
 #define USAGE "lit un graphe dans le fichier <filename> et genere une figure en PostScript dans <filename>.eps"
 
 int *table_dijkstra;
+
 void dijkstra(graphe *g, int x);
 graphe *SP(graphe *g, int x, int y);
 
 // Helpers functions
 void ask_user_vertices(graphe *g);
+
+// Helpers variables
+char *format_fi; // Contains argv[1] information to plot
 
 int main(int argc, char **argv)
 {
@@ -37,48 +41,9 @@ int main(int argc, char **argv)
 
   g = ReadGraphe(argv[1]); /* lit le graphe a partir du fichier */
 
-  dijkstra(g, 3);
-//   graphe *g_1 = Symetrique(g);
+  format_fi = argv[1];
 
-//   int arc, ver_1,arc_1, ver, n_1,n;
-//   n_1 = g_1->nsom;
-//   n= g->nsom;
-//   pcell p_1,p;
-
-//   for (int i = 0; i < n_1; i++)
-//   {
-//       // printf("name=%s", g_1->nomsommet[1]);
-//     printf("Vertex %d\n",i);
-//     for (p_1 = g_1->gamma[i]; p_1 != NULL; p_1 = p_1->next)
-//     {
-//       arc_1 = p_1->v_arc;
-//       ver_1 = p_1->som;
-
-//       printf("pre=%d\n", ver_1);
-//     }
-// printf("------------------\n");
-// //     for (p = g->gamma[i]; p != NULL; p = p->next)
-// //     {
-// //       arc = p->v_arc;
-// //       ver = p->som;
-
-// //       printf("des=%d\n", ver);
-// //     }
-
-//   }
-
-  PlongementCirculaire(g, 150);  /* plonge le graphe dans le plan */
-  sprintf(buf, "%s.eps", argv[1]); /* construit le nom du fichier PostScript */
-  EPSGraphe(g,                   /* genere une figure en PostScript */
-            buf,                   // nom fichier
-            2,                     // rayon sommets
-            3,                     // taille fleches
-            50,                    // marge
-            1,                     // noms sommets
-            0,                     // valeurs sommets
-            1,                     // couleurs sommets
-            1                      // valeurs arcs
-  );
+  dijkstra(g, 0);
 
   TermineGraphe(g);
   return 0;
@@ -120,39 +85,52 @@ graphe *SP(graphe *g, int x, int y)
   printf("Your destination: %s \n\n", g->nomsommet[y]);
   printf("************************************************\n\n");
 
-  graphe *g_1;
-
-  g_1 = Symetrique(g);
-
-  int arc, ver, n;
-  n = g_1->nsom;
+  graphe *g_1 = Symetrique(g);
+  graphe *g_f;
+  boolean *D; /* pour les "descendants" (successeurs a N niveaux) */
+  Lifo *S_P;  /* liste temporaire geree en pile (Last In, First Out) */
+  int i, n, s, a;
   pcell p;
+  char buf[256];
 
-  for (int i = 0; i < n; i++)
+  n = g_1->nsom;
+  S_P = CreeLifoVide(n);
+  g_f = InitGraphe(g_1->nsom, g_1->narc);
+
+  LifoPush(S_P, y);
+  while (!LifoVide(S_P))
   {
-    // printf("name=%s", g_1->nomsommet[0]);
+    i = LifoPop(S_P);
     for (p = g_1->gamma[i]; p != NULL; p = p->next)
-    {
-      arc = p->v_arc;
-      ver = p->som;
+    { /* pour tout sommet s successeur de i */
+      s = p->som;
+      a = p->v_arc;
 
-      printf("vertex=%d and edge=%d and i=%d\n", ver, arc, i);
+      if (table_dijkstra[i] >= table_dijkstra[s] + a)
+      {
+        AjouteArcValue(g_f, s, i, a);
+        printf("----- Station: %s", g->nomsommet[i]);
+        LifoPush(S_P, s);
+      }
     }
   }
+  LifoTermine(S_P);
 
-  // //   printf("Table[%d] = %d\n", i, table_dijkstra[i]);
-  // //   // if (t == y)
-  // //   // {
-  // //   //   printf("\n\n************************************************");
-  // //   //   printf("\n\nYou arrived: %s \n\n", g->nomsommet[y]);
-  // //   //   printf("************************************************\n\n");
-  // //   //   break;
-  //   }
-  // }
+  // Plotting
+  PlongementCirculaire(g_f, 150);    /* plonge le graphe dans le plan */
+  sprintf(buf, "%s.eps", format_fi); /* construit le nom du fichier PostScript */
+  EPSGraphe(g_f,                     /* genere une figure en PostScript */
+            buf,                     // nom fichier
+            2,                       // rayon sommets
+            3,                       // taille fleches
+            50,                      // marge
+            1,                       // noms sommets
+            0,                       // valeurs sommets
+            1,                       // couleurs sommets
+            1                        // valeurs arcs
+  );
 
-  // //RetireArc(g,1,2);
-
-  return g;
+  return g_1;
 }
 
 /**
@@ -190,6 +168,7 @@ void dijkstra(graphe *g, int x)
 
   while (k < n && miu != infinite)
   {
+
     S[y] = FALSE;
 
     // Distance traversed or cost
@@ -203,11 +182,7 @@ void dijkstra(graphe *g, int x)
       vertex = p->som;
       arc = p->v_arc;
 
-      // Only for the non-visited vertices
-      if (S[vertex])
-      {
-        L[vertex] = arc + miu;     // Assign the cost to the vertex
-      }
+      L[vertex] = arc + miu; // Assign the cost to the vertex
     }
 
     // Finds the minimum next value of y
@@ -254,5 +229,5 @@ void dijkstra(graphe *g, int x)
   printf("\n ------------ END DIJKSTRA ------------------- \n");
 
   table_dijkstra = L;
-  // ask_user_vertices(g);
+  ask_user_vertices(g);
 }
