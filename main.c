@@ -123,24 +123,7 @@ void dijkstra(graphe *g, int x)
   printf("\n\nEnter the destination vertex: ");
   scanf("%d", &final_vertex);
 
-  graphe *g_f;
-  char buf[256];
-
-  g_f = SP(g, initial_vertex, final_vertex);
-
-  sprintf(buf, "%s_ca.eps", format_fi); /* construit le nom du fichier PostScript */
-  EPSGraphe(g_f,                     /* genere une figure en PostScript */
-	    buf, // nom fichier
-	    3,  // rayon sommets
-	    1,   // taille fleches
-	    60,  // marge
-	    1,   // noms sommets
-	    1,   // valeurs sommets
-	    1,   // couleurs sommets
-	    1    // valeurs arcs
-	    );
-  
-  TermineGraphe(g_f);
+  SP(g, initial_vertex, final_vertex);
 
 }
 
@@ -168,10 +151,6 @@ void print_dijkstra(int *table_dijkstra, int n)
 /* ====================================================================== */
 graphe *SP(graphe *g, int x, int y)
 {
-  printf("\n\n************************************************");
-  printf("\n\nYou depart from: %s", g->nomsommet[x]);
-  printf("Your destination: %s \n\n", g->nomsommet[y]);
-  printf("************************************************\n\n");
 
   int n, vertex, arc, new_x;
   n = g->nsom;
@@ -204,17 +183,35 @@ graphe *SP(graphe *g, int x, int y)
   int v;
   pcell p1;
 
+  printf("\n\n************************************************");
+  printf("\n\nYou depart from: %s", g->nomsommet[a]);
   for (int i = 0; i < n; i++)
   {
     for (p1 = g_1->gamma[i]; p1 != NULL; p1 = p1->next)
     {
       v = p1->som;
 
-      if(v != b) printf("\n[RATP] Station: %s", g_1->nomsommet[v]);
+      if(v != b) printf("\n[NEXT] Station: %s", g_1->nomsommet[v]);
 
     } 
   } 
-  printf("\n\n************************************************\n");
+  printf("\nYour destination: %s", g->nomsommet[b]);
+  printf("\n************************************************\n");
+
+  char buf[256];
+
+  sprintf(buf, "%s_ca.eps", format_fi); /* construit le nom du fichier PostScript */
+  EPSGraphe(g_1,                     /* genere une figure en PostScript */
+	    buf, // nom fichier
+	    3,  // rayon sommets
+	    1,   // taille fleches
+	    60,  // marge
+	    0,   // noms sommets
+	    0,   // valeurs sommets
+	    1,   // couleurs sommets
+	    0    // valeurs arcs
+	    );
+  
 
   return g_1;
 }
