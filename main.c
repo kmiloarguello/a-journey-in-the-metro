@@ -158,6 +158,7 @@ graphe *SP(graphe *g, int x, int y)
   graphe *g_1 = InitGraphe(g->nsom, g->narc);
   pcell p;
 
+  // Helper variables in order to print and plot
   int a = x;
   int b = y;
 
@@ -168,6 +169,9 @@ graphe *SP(graphe *g, int x, int y)
     {
       vertex = p->som;
       arc = p->v_arc;
+
+      // Compare i.e the last vertex with the predecesor. 
+      // We need to confirm that the arc selected is on on the dijkstra result
       if (table_dijkstra[y] - table_dijkstra[vertex] == arc)
       {
         AjouteArcValue(g_1, vertex, y, arc);
@@ -198,6 +202,7 @@ graphe *SP(graphe *g, int x, int y)
   printf("\nYour destination: %s", g->nomsommet[b]);
   printf("\n************************************************\n");
 
+  // Plotting
   char buf[256];
 
   sprintf(buf, "%s_ca.eps", format_fi); /* construit le nom du fichier PostScript */

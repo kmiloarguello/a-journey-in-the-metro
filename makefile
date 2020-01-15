@@ -1,5 +1,5 @@
-SRC=graph_basic.c graph_print.c graph_algos.c graphaux.c #dijkstra.c shortest_path.c
-OBJ=graph_basic.o graph_print.o graph_algos.o graphaux.o #dijkstra.o shortest_path.o
+SRC=graph_basic.c graph_print.c graph_algos.c graphaux.c
+OBJ=graph_basic.o graph_print.o graph_algos.o graphaux.o 
 
 # version LINUX:
 CC = g++
@@ -21,12 +21,6 @@ clean:
 
 .c.exe:	
 	$(CC) $(CCFLAGS) $< $(OBJ) -lm -o $@
-
-# dijkstra.o : graphes.h graphaux.h dijkstra.c
-# 	$(CC) $(CCFLAGS) -c dijkstra.c
-
-# shortest_path.o : graphes.h graphaux.h dijkstra.c shortest_path.c
-# 	$(CC) $(CCFLAGS) -c shortest_path.c
 
 graphaux.o:	graphes.h graphaux.h graphaux.c
 	$(CC) $(CCFLAGS) -c graphaux.c
