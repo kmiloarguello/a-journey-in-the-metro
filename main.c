@@ -6,6 +6,19 @@
  * Student: ARGUELLO Camilo
  * 
  * This code calculates the shortest path for a given graph.
+ * The input must contain the graph structure with names,values and arcs.
+ * The code was tested with test_dijkstra.graph file and metro_complete.graph file (in the same folder).
+ * 
+ ***** Order of execution by functions. *****
+ *      [MAIN] -> [DIJKSTRA] -> [SP]
+ *
+ *(1) It asks to the user to indicate the start vertex X.
+ *(2) Then, it calculates Dijkstra.
+ *(3) Then, it asks to the user to type the second vertex value Y.
+ *(4) Then, it finds the Shortest Path from X to Y.
+ *(5) Finally, it prints the results in *.eps file and in the console.
+ *
+ * 
  * */
 
 #include <stdlib.h>
@@ -111,7 +124,7 @@ void dijkstra(graphe *g, int x)
     }
 
     miu = minimum; // Distance traversed or cost
-    y = min_y;     // Next index vertex
+    y = min_y;     // Next minimum index vertex
     S[y] = FALSE;  // Vertex visited assigned to false
 
     k++;
@@ -127,6 +140,9 @@ void dijkstra(graphe *g, int x)
 
 }
 
+/**
+ * It shows the dijkstra table result
+ * */
 void print_dijkstra(int *table_dijkstra, int n)
 {
   printf("\n\n ------------ DIJKSTRA ------------------- \n");
@@ -221,6 +237,9 @@ graphe *SP(graphe *g, int x, int y)
   return g_1;
 }
 
+/**
+ * To prevent errors when plotting, it is helpful to copy all the values from the current graph to the new one
+ * */
 void assign_graph_parameters(graphe *dest, graphe *src)
 {
   int i;
