@@ -18,7 +18,6 @@
  *(4) Then, it finds the Shortest Path from X to Y.
  *(5) Finally, it prints the results in *.eps file and in the console.
  *
- * 
  * */
 
 #include <stdlib.h>
